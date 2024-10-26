@@ -19,14 +19,6 @@ namespace SpamProject
             _subscriptions[category].Add(customer);
         }
 
-        public void Unsubscribe(string category, ICustomer customer)
-        {
-            if (_subscriptions.ContainsKey(category))
-            {
-                _subscriptions[category].Remove(customer);
-            }
-        }
-
         public void Notify(string category, string message)
         {
             if (_subscriptions.ContainsKey(category))

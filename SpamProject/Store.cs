@@ -9,7 +9,7 @@ namespace SpamProject
 {
     public class Store
     {
-        private  List<string> _categories = new() { "Електроніка", "Одяг", "Іграшки" };
+        private  List<string> _categories = new() { "Clothes", "Products", "Toys" };
         private  DiscountNotification _notification = new();
 
         public void SubscribeCustomer(string category, ICustomer customer)
@@ -17,14 +17,9 @@ namespace SpamProject
             _notification.Subscribe(category, customer);
         }
 
-        public void UnsubscribeCustomer(string category, ICustomer customer)
-        {
-            _notification.Unsubscribe(category, customer);
-        }
-
         public void NotifyDiscounts(string category, string discountMessage)
         {
-            Console.WriteLine($"Магазин: нова знижка в категорії {category}");
+            Console.WriteLine($"Shop: new discount on {category}");
             _notification.Notify(category, discountMessage);
         }
     }
