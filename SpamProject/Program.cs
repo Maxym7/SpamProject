@@ -1,13 +1,13 @@
 ﻿using System;
-using SpamProject;
+using System.Collections.Generic;
 
-namespace SpamProject
+namespace ObserverPattern
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-
+            
         }
     }
 }
